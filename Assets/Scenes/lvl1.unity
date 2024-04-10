@@ -176,7 +176,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 93833ff6ff2e6d34897237ad0c07092f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31793,8 +31793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886cb2a915a427e4ca44565a4e4caef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 915553965}
-  moveSpeed: 7
+  speed: 4
 --- !u!50 &915553965
 Rigidbody2D:
   serializedVersion: 4
@@ -31865,7 +31864,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1456614, y: 0.7948899}
+  m_Size: {x: 0.6, y: 0.4}
   m_EdgeRadius: 0
 --- !u!1 &955958989
 GameObject:

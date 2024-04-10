@@ -4,11 +4,33 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //I recommend 7 for the move speed, and 1.2 for the force damping
-    public Rigidbody2D rb;
-    public float moveSpeed;
+    public float speed;
+    private Rigidbody2D myRigidbody;
+    private Vector3 change;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+
+    }
+
     void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        if(change!= Vector3.zero)
+        {
+            MoveCharacter();
+            animator.SetFloat("moveX", change.x);
+            animator.SetFloat("moveY", change.y);
+        }
+    }
+
+    void MoveCharacter()
+    {
+        myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
     }
 }
