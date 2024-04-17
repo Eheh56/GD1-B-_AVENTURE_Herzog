@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    public GameObject bullet;
+    public Transform weapon;
+    public Transform shot_point;
+    public float offset;
+
 
     void Start()
     {
@@ -27,6 +32,17 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
         }
+
+        bool shoot = Input.GetButtonDown("Fire1");
+        shoot |= Input.GetButtonDown("Fire2");
+        if (shoot)
+        {
+            Instantiate(bullet, shot_point.position, shot_point.rotation);
+        }
+        //AIM
+        Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        float angle = -Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
+        weapon.rotation = Quaternion.Euler(0, 0, angle + offset);
     }
 
     void MoveCharacter()
