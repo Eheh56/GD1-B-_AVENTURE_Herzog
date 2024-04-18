@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -39,11 +41,16 @@ public class WeaponScript : MonoBehaviour
         {
             shootCooldown -= Time.deltaTime;
         }
+
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        StartCoroutine(End());
     }
 
-    //--------------------------------
-    // 3 - Tirer depuis un autre script
-    //--------------------------------
+    private IEnumerator End()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Destroy(gameObject);
+    }
 
     /// <summary>
     /// Création d'un projectile si possible
