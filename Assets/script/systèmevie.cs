@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class systèmevie : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class systèmevie : MonoBehaviour
             else
             {
                 hearts[i].sprite = heart_empty;
+            }
+            if (pv <= 0)
+            {
+                SceneManager.LoadScene("DeathScreen");
             }
         }
     }
