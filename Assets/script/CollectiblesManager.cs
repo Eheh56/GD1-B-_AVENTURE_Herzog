@@ -3,34 +3,24 @@ using TMPro;
 
 public class CollectiblesManager : MonoBehaviour
 {
-    public TextMeshProUGUI gemUI;
+    public TextMeshProUGUI gemUI1;
+    public TextMeshProUGUI gemUI2;
     int numGemsCollected = 0;
-
-    // Example of another collectible type
-    //public TextMeshProUGUI diamondUI;
-    //int numDiamondsCollected = 0;
 
     private void OnEnable()
     {
         Gem.OnGemCollected += GemCollected;
-        //Diamond.OnDiamondCollected += DiamondCollected;
     }
 
     private void OnDisable()
     {
         Gem.OnGemCollected -= GemCollected;
-        //Diamond.OnDiamondCollected -= DiamondCollected;
     }
 
     private void GemCollected()
     {
         numGemsCollected++;
-        gemUI.text = numGemsCollected.ToString();
+        gemUI1.text = numGemsCollected.ToString();
+        gemUI2.text = numGemsCollected.ToString();
     }
-
-    //private void DiamondCollected()
-    //{
-    //    numDiamondsCollected++;
-    //    diamondUI.text = numDiamondsCollected.ToString();
-    //}
 }
