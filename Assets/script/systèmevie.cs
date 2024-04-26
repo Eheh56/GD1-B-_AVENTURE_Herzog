@@ -33,7 +33,6 @@ public class systèmevie : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            pv -= damage;
             Debug.Log("losepv");
         }
         for (int i = 0; i < hearts.Length; i++)
