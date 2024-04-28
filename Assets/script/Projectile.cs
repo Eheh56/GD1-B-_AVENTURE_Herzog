@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public int damageAmount = 1; // Montant de dégâts infligés à l'ennemi
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        // Obtenez le composant Enemy de l'ennemi touché
-        Enemy enemy = other.GetComponent(Enemy);
-        // Si l'ennemi est valide, infligez-lui des dégâts
+        // Check if the object we collided with is an enemy
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.TakeDamage(damageAmount);
-        }
+            // Destroy this object
+            Destroy(gameObject);
 
-        // Détruisez le projectile après avoir touché l'ennemi
-        Destroy(gameObject);
+            // Take 1 damage from the enemy
+            enemy.TakeDamage(1);
+        }
     }
 }

@@ -75,4 +75,5 @@ public class WeaponScript : MonoBehaviour
             return shootCooldown <= 0f;
         }
     }
+
 }

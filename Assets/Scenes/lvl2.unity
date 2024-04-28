@@ -789,7 +789,7 @@ Transform:
   m_GameObject: {fileID: 159613018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8580003, y: 14.404085, z: -12.045605}
+  m_LocalPosition: {x: 1.348, y: 15.714085, z: -12.045605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1090,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 177444109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 4.76, z: -2.06}
+  m_LocalPosition: {x: -6.51, y: 6.07, z: -2.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11587,6 +11587,7 @@ GameObject:
   - component: {fileID: 399092940}
   - component: {fileID: 399092939}
   - component: {fileID: 399092941}
+  - component: {fileID: 399092942}
   m_Layer: 0
   m_Name: plaque (1)
   m_TagString: Untagged
@@ -11706,6 +11707,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &399092942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399092938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23aa357ef65dd264aa27cd215aab991b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: lvl3
 --- !u!1 &570136840
 GameObject:
   m_ObjectHideFlags: 0
@@ -16014,7 +16028,7 @@ Transform:
   m_GameObject: {fileID: 1941331005}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8580003, y: 14.404085, z: -12.045605}
+  m_LocalPosition: {x: 1.348, y: 15.714085, z: -12.045605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

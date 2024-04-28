@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
 
         if (angle > -45 && angle <= 45)
         {
-            animator.Play("enemieanim");
+            animator.Play("enemieAR");
         }
         else if (angle > 45 && angle <= 135)
         {
@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
         }
         else if (angle > 135 || angle <= -135)
         {
-            animator.Play("enemieAR");
+            animator.Play("enemieanim");
         }
         else if (angle > -135 && angle <= -45)
         {
